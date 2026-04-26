@@ -1,0 +1,31 @@
+[project]
+name = "rag-agent"
+version = "0.1.0"
+description = "LangChain RAG agent with PgVector"
+requires-python = ">=3.11"
+
+dependencies = [
+    "langchain>=0.3",
+    "langchain-openai>=0.2",
+    "langchain-postgres>=0.0.12",
+    "pgvector>=0.3",
+    "psycopg[binary]>=3.2",
+    "python-dotenv>=1.0",
+    "openai>=1.50",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "ruff>=0.6",
+]
+
+[tool.ruff]
+line-length = 88
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]  # pycodestyle errors, pyflakes, isort
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

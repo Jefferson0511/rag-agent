@@ -1,0 +1,38 @@
+# Dependencies
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+env/
+
+# Environment and secrets
+.env
+.env.*
+
+# Build artifacts
+dist/
+build/
+*.egg-info/
+
+# Data and models (too large, not useful for Claude)
+documents/raw/
+*.pdf
+*.bin
+*.pt
+*.pth
+mlruns/
+
+# Logs
+*.log
+logs/
+
+# Docker
+.docker/
+
+# IDE
+.vscode/
+.idea/
+
+# Git
+.git/
